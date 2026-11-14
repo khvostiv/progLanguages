@@ -1,32 +1,16 @@
 // Vasilina Khvostikova
 // 2024-10-28
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { RouterOutlet } from '@angular/router';
 import { BaseChartDirective } from 'ng2-charts';
-import { CommonModule } from '@angular/common'; 
+import { CommonModule } from '@angular/common';
 import { ChartType, ChartData, ChartOptions } from 'chart.js';
 import { MatDialog } from '@angular/material/dialog';
 import { AboutDialogComponent } from './about-dialog/about-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-
-
-// webservise for file
-@Injectable({
-  providedIn: 'root'
-})
-export class WebService {
-  private jsonUrl = '/program-languages.json';
-  constructor(private http: HttpClient) {}
-
-  loadLanguagesData(): Observable<any[]> {
-    return this.http.get<any[]>(this.jsonUrl);
-  }
-}
+import { WebService } from './web.service';
 
 @Component({
   selector: 'app-root',

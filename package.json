@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:pages": "ng build --configuration production --base-href /progLanguages/ && rm -rf docs/* && cp -r dist/assignment2-khvostiv/browser/. docs/ && touch docs/.nojekyll",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

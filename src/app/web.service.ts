@@ -9,7 +9,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class WebService {
-  private jsonUrl = '/program-languages.json';
+  // Relative path so the file resolves under GitHub Pages (/progLanguages/)
+  private jsonUrl = 'program-languages.json';
 
   constructor(private http: HttpClient) {}
 
